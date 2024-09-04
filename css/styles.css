@@ -1,0 +1,557 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li, form, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Responsive Navigation Menu */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+}
+
+.section {
+    padding: 20px 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services, .projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Responsive Service and Project Cards */
+.service, .project {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex-basis: 45%;
+    box-sizing: border-box;
+}
+
+.service h3, .project h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.github-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.github-link a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Media Queries for Tablets and Mobile Devices */
+@media (max-width: 1024px) {
+    .service, .project {
+        flex-basis: 48%;
+    }
+}
+
+@media (max-width: 768px) {
+    .service, .project {
+        flex-basis: 100%;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .service, .project {
+        padding: 15px;
+    }
+
+    form input, form textarea {
+        padding: 8px;
+    }
+
+    form button {
+        width: 100%;
+        padding: 12px;
+    }
+}
+/* Existing styles ... */
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #333;
+    color: #fff;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    transform: translateY(0);
+}
+
+.sidebar .close-btn {
+    font-size: 2rem;
+    color: #fff;
+    text-align: right;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.hamburger {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none; /* Hidden by default, shown on small screens */
+}
+
+/* Responsive design: Show hamburger on small screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+    }
+}
+
+
+
+
+/* Existing styles ... */
+
+/* About Me section */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #333;
+    object-fit: cover;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Testimonials carousel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 800px;
+    margin: auto;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.carousel-item p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.carousel-item cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+
+
+
+/* Existing styles ... */
+
+/* Popup styles */
+/*
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.popup h2 {
+    margin: 0 0 10px;
+}
+
+.popup p {
+    margin: 0 0 20px;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.popup-buttons button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.popup-buttons button:hover {
+    background: #0056b3;
+}
+
+.popup-buttons button:last-child {
+    background: #6c757d;
+}
+
+.popup-buttons button:last-child:hover {
+    background: #5a6268;
+}
+*/
+
+/*footer styles* /
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    font-size: 0.9rem;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.footer-section p, 
+.footer-section ul {
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+    color: #bbb;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.footer-section .social-icons {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-section .social-icons li {
+    margin-right: 15px;
+}
+
+.footer-section .social-icons li a img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s;
+}
+
+.footer-section .social-icons li a img:hover {
+    opacity: 0.7;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    color: #bbb;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+/*error message for validating any user inputs */
+/* Basic styles for the contact form */
+.container2 {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin-top: 10px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #555;
+}
+
+/* Feedback messages */
+.success-message {
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: #dc3545;
+    margin-bottom: 20px;
+}
+
+
