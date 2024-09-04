@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Daniel Kioko</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <!-- Header content -->
+    </header>
+
+    <section id="contact" class="section">
+        <div class="container2">
+            <h2>Contact Me</h2>
+            <!-- Display feedback messages -->
+            <?php
+            if (isset($_GET['success'])) {
+                if ($_GET['success'] == 1) {
+                    echo '<p class="success-message">Your message was sent successfully!</p>';
+                } else {
+                    echo '<p class="error-message">There was a problem sending your message. Please try again later.</p>';
+                }
+            }
+            ?>
+            <form action="contact.php" method="POST" id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
