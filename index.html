@@ -8,24 +8,35 @@
     <link rel="icon" href="images/favicon.png" type="image/png" sizes="16*16
 <body>
     <header>
-        <div class="container">
-            <h1>Daniel Kioko</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="hamburger" id="hamburger">
-                &#9776; <!-- Hamburger icon -->
-            </div>
-        </div>
+        <nav>
+        <ul class="sidebar">
+            <li onclick="hideside()"><a style="font-size:30px;">×</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">About Me </a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="About.html" >Projects </a></li>
+            <li><a href="contact.html">CONTACT </a></li>
+        </ul>
+        <ul>
+            <li><a><span class="brand-name">Daniel Kioko</span></a></li>
+            <li class="hidemob"><a href="index.html">home</a></li>
+            <li class="hidemob"><a href="about.html">About Me </a></li>
+             <li class="hidemob"><a href="services.html">Services </a></li>
+
+            <li class="hidemob"><a href="projects.html">Projects</a></li>
+            <li class="hidemob"><a href="contact.html">Contacts</a></li>
+            <li class="menubt" onclick="sideBar()"><a>
+                <svg xmlns="" width="26" height="26" viewBox="0 0 32 32" stroke="white" fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-width="5">
+                    <path d="M 5 5 10 5 20 5 25 5"></path>
+                    <path d="M 5 15 10 15 20 15 25 15"></path>
+                    <path d="M 5 25 10 25 20 25 25 25"></path>
+                </svg>
+            </a></li>
+        </ul>
+    </nav>
     </header>
 
-    <!-- Sidebar -->
+    <!-- Sidebar 
     <div class="sidebar" id="sidebar">
         <div class="close-btn" id="close-btn">&times;</div>
         <nav>
@@ -38,7 +49,7 @@
             </ul>
         </nav>
     </div>
-
+-->
     <section id="welcome" class="section">
         <div class="container">
             <h2>Welcome to My Portfolio</h2>
