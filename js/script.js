@@ -101,3 +101,12 @@ confirmNo.addEventListener('click', function () {
     window.removeEventListener('beforeunload', function () {});
 });
 */
+
+/*sidebar */
+function sideBar() {
+            document.querySelector('.sidebar').style.display = 'flex';
+        }
+
+        function hideside() {
+            document.querySelector('.sidebar').style.display = 'none';
+        }
