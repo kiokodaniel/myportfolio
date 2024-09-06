@@ -1,41 +1,17 @@
-// Example of a simple JavaScript function to handle form validation
-document.addEventListener("DOMContentLoaded", function() {
-    const form = document.querySelector("form");
-    
-    form.addEventListener("submit", function(event) {
-        const name = document.querySelector("#name").value;
-        const email = document.querySelector("#email").value;
-        const message = document.querySelector("#message").value;
-
-        if (!name || !email || !message) {
-            event.preventDefault();
-            alert("Please fill out all fields.");
-        }
-    });
-});
 
 
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const hamburger = document.getElementById("hamburger");
-    const sidebar = document.getElementById("sidebar");
-    const closeBtn = document.getElementById("close-btn");
-
-    hamburger.addEventListener("click", function() {
-        sidebar.classList.add("open");
-    });
-
-    closeBtn.addEventListener("click", function() {
-        sidebar.classList.remove("open");
-    });
-
-    // Close sidebar if clicking outside of it
-    document.addEventListener("click", function(event) {
-        if (!sidebar.contains(event.target) && !hamburger.contains(event.target) && sidebar.classList.contains("open")) {
-            sidebar.classList.remove("open");
+   
+    /*sidebar */
+function sideBar() {
+            document.querySelector('.sidebar').style.display = 'flex';
         }
-    });
+
+        function hideside() {
+            document.querySelector('.sidebar').style.display = 'none';
+        }
 
     // Carousel functionality
     const prevBtn = document.getElementById("prev-btn");
@@ -102,11 +78,4 @@ confirmNo.addEventListener('click', function () {
 });
 */
 
-/*sidebar */
-function sideBar() {
-            document.querySelector('.sidebar').style.display = 'flex';
-        }
 
-        function hideside() {
-            document.querySelector('.sidebar').style.display = 'none';
-        }
