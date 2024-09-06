@@ -50,7 +50,7 @@ nav ul li a {
 /* Responsive Navigation Menu */
 @media (max-width: 768px) {
     nav ul li {
-        display: block;
+        display: none;
         margin: 10px 0;
     }
 
